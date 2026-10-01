@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Drama Collective Stage Planner</title>
+  <meta name="description" content="Plan a theatre production in 3D: stairs, risers, box sets, an LED wall, a lighting rig with RGB spotlights, audience seating, props and speakers. Walk through the hall and save realistic renders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app" class="app" data-mode="design">
+    <header id="topbar" class="topbar"></header>
+    <main id="stagewrap" class="stagewrap">
+      <div id="viewport" class="viewport"></div>
+      <aside id="library" class="panel library" aria-label="Parts library"></aside>
+      <aside id="inspector" class="panel inspector" aria-label="Selected item" hidden></aside>
+      <div id="walkhud" class="walkhud" hidden></div>
+      <div id="modehint" class="modehint" role="status"></div>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <div id="loading" class="loading">Setting up the hall…</div>
+    </main>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
